@@ -7,12 +7,6 @@ export class User {
     id: ObjectID
 
     @Column()
-    firstName: string
-
-    @Column()
-    email: string
-
-    @Column()
-    password: string
+    name: string
 
 }
