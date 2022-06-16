@@ -2,6 +2,15 @@ import { AppDataSource } from "./data-source"
 import { Shirt } from "./entity/Shirt"
 import { User } from "./entity/User"
 
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
+
 AppDataSource.initialize().then(async () => {
 
     console.log("Inserting a new user into the database...")
@@ -33,3 +42,5 @@ AppDataSource.initialize().then(async () => {
     console.log("Here you can setup and run express / fastify / any other framework.")
 
 }).catch(error => console.log(error))
+
+
